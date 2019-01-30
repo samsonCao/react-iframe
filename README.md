@@ -2,6 +2,7 @@
 - npm install &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----安装依赖
 - npm run dll &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----打包react等第三方依赖包为静态文件
 - npm run dev &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----启动项目
+- 浏览器输入 http://localhost:8088/
 - 如果运行失败，请升级node版本之后再试
 ### 新建项目
 - mkdir admin-cao 创建文件夹
