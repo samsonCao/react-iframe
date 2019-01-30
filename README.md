@@ -5,8 +5,8 @@
 - 浏览器输入 http://localhost:8088/
 - 如果运行失败，请升级node版本之后再试
 ### 新建项目
-- mkdir admin-cao 创建文件夹
-- cd admin-cao 进入自己的项目文件夹
+- mkdir react-iframe 创建文件夹
+- cd react-iframe 进入自己的项目文件夹
 - npm init 创建package.json仓库
 - touch .gitignore 创建文件.gitignore
 - mkdir app 创建入口文件夹app
