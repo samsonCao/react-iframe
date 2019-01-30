@@ -1,0 +1,47 @@
+{
+  "parser": "babel-eslint",   //解析器
+  "extends": [
+    "standard",
+    "standard-react",
+    "plugin:promise/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ], //继承这些包中的eslint配置，如果不在这里继承，请在settings字段中手动设置
+  // 如果在commit时，eslint报错，请在此处删掉继承的规则
+  "plugins": ["babel", "react", "promise"], //第三方插件 省略了eslint-plugin-前缀
+  "globals": { // 定义的全局变量_(lodash) 只读,不能被重写
+    "_": false
+  },
+  "rules": {
+    "camelcase": 0,
+    "semi": ["error", "always"],
+    "indent": ["error", 4],
+    "react/jsx-indent": ["error", 4],
+    "react/jsx-indent-props": ["error", 4],
+    "react/jsx-no-bind": 0,
+    // don't force es6 functions to include space before paren
+    "space-before-function-paren": 0,
+    // allow specifying true explicitly for boolean props
+    "react/jsx-boolean-value": 0,
+    "generator-star-spacing": "off",
+    "no-multi-spaces": 0,
+    "max-lines": [
+      "error",
+      {
+        "max": 350,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    }
+  }
+}

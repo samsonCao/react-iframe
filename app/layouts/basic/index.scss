@@ -1,0 +1,48 @@
+.basic {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &__hd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #333;
+  }
+
+  &__bd {
+    position: relative;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+
+    &__menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background: #F2F3F7;
+    }
+
+    &__main {
+      height: 100%;
+      padding-left: 200px;
+      overflow: scroll;
+    }
+
+    &__ft {
+      height: 50px;
+      line-height: 50px;
+      text-align: right;
+      padding: 0 20px;
+      background: #333;
+      color: #fff;
+    }
+  }
+}

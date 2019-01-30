@@ -1,0 +1,30 @@
+.login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &__bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    padding-right: 480px;
+    img {
+      position: absolute;
+      left: -240px;
+      width: 100%;
+    }
+  }
+
+  &__form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 480px;
+    height: 100%;
+    background: #fff;
+    padding: 173px 55px 55px;
+  }
+}

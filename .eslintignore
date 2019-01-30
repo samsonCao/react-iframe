@@ -1,0 +1,5 @@
+node_modules/**
+build/**
+app/index.html
+dll/**
+dist/**
