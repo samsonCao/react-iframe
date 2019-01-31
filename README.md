@@ -390,7 +390,7 @@
     ```
 ### 生产环境下启动服务
 在 build 文件夹下使用 [http-server](https://github.com/indexzero/http-server) 启动服务:
-- cd admin-starter
+- cd react-iframe
 - 注意这⾥里里是全局安装, react-iframe不依赖 http-server
 - sudo npm i -g http-server
 - cd build  进入文件
