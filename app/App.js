@@ -14,7 +14,9 @@ const store = createStore(models);
 class App extends Component {
     render() {
         return (
+            //    高阶组件，将redux中的store数据和当前项目绑定在一起,每个子组价都可以通过connect获取到store中的数据
             <Provider store={store}>
+                {/*把浏览器路由和react绑定在一起*/}
                 <ConnectedRouter history={history}>
                     {routes}
                 </ConnectedRouter>

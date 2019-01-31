@@ -14,6 +14,8 @@ const reducers = { router: connectRouter(history) };
  * 基于 Rematch 实现的 Redux 最佳实践
  *
  * More: https://rematch.gitbook.io/handbook/
+ *
+ * 顶层的store数据，返回给应用程序使用
  */
 export default (models) => init({
     redux: {

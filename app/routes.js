@@ -7,11 +7,13 @@ const Loading = () => (
     <span>Loading...</span>
 );
 
+//Loadable是一个高级组件，用来懒加载各个模块的组件
 const lazy = Name => Loadable({
     loader: () => import(`./pages/${Name}`),
     loading: Loading
 });
 
+// 无状态组件，函数式组件定义方式，返回的是路由包裹的各个组件
 const RouteWithLayout = ({ layout: BasicLayout, component: Component, ...rest }) => { // eslint-disable-line
     return (
         <Route {...rest} render={props => (
@@ -43,6 +45,7 @@ const basicRoutes = [
     }
 ];
 
+// 把路由和组件绑定起来，返回给应用程序用，并实现懒加载，按需加载
 export default (
     <Switch>
         {basicRoutes.map(item => (
