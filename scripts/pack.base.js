@@ -44,6 +44,11 @@ const baseConfig = {
      * */
     module: {
         rules: [
+            /**
+             * 用babel-loader处理js和jsx结尾的文件，转换es6语法
+             * 不包括node_modules包中的文件
+             * 包括app下的文件
+             */
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
@@ -58,6 +63,9 @@ const baseConfig = {
                     { loader: 'sass-loader' }     // sass-loader 将 less 转为 css,
                 ]
             },
+            /**
+             * 各种格式的文件转码生成带hash值的图片
+             */
             {
                 test: /\.(bmp|gif|jpg|jpeg|png|svg)$/,
                 exclude: /node_modules/,
@@ -65,6 +73,9 @@ const baseConfig = {
                     'file-loader'
                 ]
             },
+            /**
+             * 各种格式的文件转码
+             */
             {
                 test: /\.(eot|otf|ttf|woff|woff2|svg)$/,
                 exclude: /node_modules/,
@@ -94,7 +105,7 @@ const baseConfig = {
             __PROD__
         }),
         /**
-         * 用来生成html
+         * 用来生成html，以./app/index.html为模板文件，生成./index.html文件，生产环境打包可以看到
          * template是入口文件，此处定义为./app/index.html
          * filename是输出的文件，此处定义为./index.html
          */

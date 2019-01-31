@@ -1,12 +1,6 @@
-### 启动项目
-- npm install &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----安装依赖
-- npm run dll &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----打包react等第三方依赖包为静态文件
-- npm run dev &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----启动项目
-- 浏览器输入 http://localhost:8088/
-- 如果运行失败，请升级node版本之后再试
 ### 新建项目
-- mkdir react-iframe 创建文件夹
-- cd react-iframe 进入自己的项目文件夹
+- mkdir admin-cao 创建文件夹
+- cd admin-cao 进入自己的项目文件夹
 - npm init 创建package.json仓库
 - touch .gitignore 创建文件.gitignore
 - mkdir app 创建入口文件夹app
@@ -164,6 +158,10 @@
     - 将单个文件或整个目录复制到构建目录
     - 本项目是把public下的文件放到build文件下，生产环境是打包在一起
     - github网址： https://github.com/webpack-contrib/copy-webpack-plugin
+- webpack-merge
+    - 合并scripts文件夹中的某些js文件
+    - 本项目是把pack.base.js中的文件合并到pack.build.js中
+    - github网站： https://github.com/survivejs/webpack-merge
 ### 在生产环境安装的依赖 npm i --save xxx
 - react
     - 是react的核心代码，包含生成虚拟dom的函数react.createElement,以及Component类等基础配置
@@ -408,9 +406,12 @@
 ### 分包压缩，打包优化
 - 三点
     - 抽离 pack.dev.js 和 pack.build.js 中相同的配置
+        - scripts/pack.base.js放共用配置，pack.build.js和pack.dev.js引用该共用配置
+        - scripts/pack.dll.js放打包的引用文件执行脚本，运行npm run dll，生成dll静态文件，然后在pack.dev.js环境引用
     - 优化 npm run dev 的速度和热更新
-    - 优化 npm run build 的速度
-
+        - 主要依赖pack.dev.js完成
+    - 优化 npm run build 的速度和文件体积
+        - 主要依赖压缩混淆等方法完成，生成生产环境的代码
 
 ### 命令行介绍
    - dev: 开发环境打包
