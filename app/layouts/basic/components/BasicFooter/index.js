@@ -5,7 +5,7 @@ class BasicFooter extends Component {
     render() {
         return (
             <div className='basic-footer'>
-                <span>© admin-cao </span>
+                <span>© sam cao </span>
                 <span>v1.0.1</span>
             </div>
         );

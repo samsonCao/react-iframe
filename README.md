@@ -1,6 +1,6 @@
 ### 新建项目
-- mkdir admin-cao 创建文件夹
-- cd admin-cao 进入自己的项目文件夹
+- mkdir react-iframe创建文件夹
+- cd react-iframe进入自己的项目文件夹
 - npm init 创建package.json仓库
 - touch .gitignore 创建文件.gitignore
 - mkdir app 创建入口文件夹app
@@ -391,7 +391,7 @@
 ### 生产环境下启动服务
 在 build 文件夹下使用 [http-server](https://github.com/indexzero/http-server) 启动服务:
 - cd admin-starter
-- 注意这⾥里里是全局安装, admin-cao 不依赖 http-server
+- 注意这⾥里里是全局安装, react-iframe不依赖 http-server
 - sudo npm i -g http-server
 - cd build  进入文件
 - http-server  在当前文件下启动服务
