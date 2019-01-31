@@ -404,14 +404,13 @@
     Hit CTRL-C to stop the server
     ```
 ### 分包压缩，打包优化
-- 三点
-    - 抽离 pack.dev.js 和 pack.build.js 中相同的配置
-        - scripts/pack.base.js放共用配置，pack.build.js和pack.dev.js引用该共用配置
-        - scripts/pack.dll.js放打包的引用文件执行脚本，运行npm run dll，生成dll静态文件，然后在pack.dev.js环境引用
-    - 优化 npm run dev 的速度和热更新
-        - 主要依赖pack.dev.js完成
-    - 优化 npm run build 的速度和文件体积
-        - 主要依赖压缩混淆等方法完成，生成生产环境的代码
+- 抽离 pack.dev.js 和 pack.build.js 中相同的配置
+    - scripts/pack.base.js放共用配置，pack.build.js和pack.dev.js引用该共用配置
+    - scripts/pack.dll.js放打包的引用文件执行脚本，运行npm run dll，生成dll静态文件，然后在pack.dev.js环境引用
+- 优化 npm run dev 的速度和热更新
+    - 主要依赖pack.dev.js完成
+- 优化 npm run build 的速度和文件体积
+    - 主要依赖压缩混淆等方法完成，生成生产环境的代码
 
 ### 命令行介绍
    - dev: 开发环境打包
