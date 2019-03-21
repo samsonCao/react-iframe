@@ -162,6 +162,10 @@
     - 合并scripts文件夹中的某些js文件
     - 本项目是把pack.base.js中的文件合并到pack.build.js中
     - github网站： https://github.com/survivejs/webpack-merge
+
+- plop
+    - 使用plop配置模板，通过命令行生成模板代码
+    - github网址：https://github.com/amwmedia/plop
 ### 在生产环境安装的依赖 npm i --save xxx
 - react
     - 是react的核心代码，包含生成虚拟dom的函数react.createElement,以及Component类等基础配置
