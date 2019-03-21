@@ -1,4 +1,6 @@
-###### 南极智云项目技术栈介绍
+###### react自研框架技术栈介绍
+
+本框架是公司中后台系统正在用的框架，分享出来供大家学习。基础知识介绍中包含了项目中每个依赖的含义和官网链接，方便大家学习。
 
 这是一个基于React的PC端中后台管理系统
 - 使用了React核心库，提供了全局变量React,包含生成虚拟dom的函数react.createElement,以及Component类等基础配置
@@ -9,7 +11,7 @@
 - 使用@rematch/core让数据流管理变的简单清晰(在redux的基础上再次封装的，不需要再声明action 等配置)
 - 使用react-loadable高阶组件拆分项目文件，分成不同的包，根据需要动态加载
 - 使用prop-types对传入的属性数据做类型校验
-- 使用antd-design作为UI展现层的基础组件，并在此基础上封装项目需要的业务组件和UI组件
+- 使用antd-design作为UI展现层的基础组件，并在此基础上封装项目需要的业务组件和UI组件。本框架用的是alifid/next，alifid是阿里开源的比antd-design轻量的UI库。
 - 使用classnames控制class类名状态
 - 使用axios处理ajax请求，实现前后端的交互
 - 使用wangeditor完成富文本编辑
