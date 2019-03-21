@@ -10,7 +10,9 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "dll": "webpack --config ./scripts/pack.dll.js",
-    "clear": "rimraf build"
+    "clear": "rimraf build",
+    "g": "npm run generate",
+    "generate": "plop --plopfile ./generators/index.js"
   },
   "repository": {
     "type": "git",
@@ -51,6 +53,8 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "path": "^0.12.7",
+    "plop": "^2.3.0",
     "pre-commit": "^1.2.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
