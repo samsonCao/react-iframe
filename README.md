@@ -1,3 +1,10 @@
+### 运行项目
+```javascript
+npm install
+npm run dll
+npm run start
+```
+
 ### 新建项目
 - mkdir react-iframe创建文件夹
 - cd react-iframe进入自己的项目文件夹
@@ -428,7 +435,4 @@
 
 - babel中文官方推荐文档：https://babel.docschina.org/docs/en/
 - babel中文： http://guoyongfeng.github.io/my-gitbook/intro.html
---------
-参考项目
-- https://github.com/rmlzy/admin-starter
 
