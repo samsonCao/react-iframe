@@ -2,7 +2,7 @@
 ```javascript
 npm install
 npm run dll
-npm run start
+npm run dev
 ```
 
 ### 新建项目
