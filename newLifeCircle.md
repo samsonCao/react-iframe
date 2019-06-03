@@ -25,9 +25,9 @@ React将组件看成是一个有生命的个体，因此为其赋予了生命周
 
 **生命周期一览图**
 
-![alt](http://192.168.1.150:8360/static/upload/20181010/upload_7efd03a3ca3f46f31cf0d58c5c555f7d.png)
+![全量](https://github.com/samsonCao/react-iframe/blob/master/public/images/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%85%A8%E9%87%8F.png)
 
-![alt](http://192.168.1.150:8360/static/upload/20181010/upload_c2a319e74952f9915712b17cb406a025.png)
+![常用](https://github.com/samsonCao/react-iframe/blob/master/public/images/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%B8%B8%E7%94%A8.png)
 
 **constructor**
 --------
@@ -51,7 +51,7 @@ constructor(props) {
         // this.handleCountAdd = this.handleCountAdd.bind(this);
     }
 ```
-![alt](http://192.168.1.150:8360/static/upload/20181010/upload_e9fecdb0befa757faf98edef8917785c.png)
+![constructor](https://github.com/samsonCao/react-iframe/blob/master/public/images/constructor.png)
 
 
 **getDerivedStateFromProps**
@@ -83,7 +83,7 @@ static getDerivedStateFromProps(nextProps, prevState) {
         return null;
     }
 ```
-![alt](http://192.168.1.150:8360/static/upload/20181010/upload_7c7621b52b01fc3cc0353b635ba3a32b.png)
+![getDerivedStateFromProps](https://github.com/samsonCao/react-iframe/blob/master/public/images/getDerived.png)
 
 **render**
 --------
@@ -109,13 +109,15 @@ componentDidMount() {
         })
     }
 ```
-![alt](http://192.168.1.150:8360/static/upload/20181010/upload_ffdb3b02d71493f4a9b1851e90caaf6f.png)![alt](http://192.168.1.150:8360/static/upload/20181010/upload_af8e6fa97a8724291219fc900c7e61b5.png)
+![didMount](https://github.com/samsonCao/react-iframe/blob/master/public/images/didMount.png)
+
+![didMount2](https://github.com/samsonCao/react-iframe/blob/master/public/images/didMount2.png)
 
 - 如果componentDidMount执行了this.setState()
    组件会先执行static getDerivedStateFromProps()
    再执行shouldComponentUpdate()
    然后执行render 重新渲染页面
-  ![alt](http://192.168.1.150:8360/static/upload/20181010/upload_512a6486191f0e0ee8a71a58bbc8e831.png)
+  ![didMount3](https://github.com/samsonCao/react-iframe/blob/master/public/images/didMount3.png)
 
 **shouldComponentUpdate**
 --------
@@ -139,7 +141,7 @@ shouldComponentUpdate(newProps, newState) {
         return newState.counter !== this.state.counter;
     }
 ```
-![alt](http://192.168.1.150:8360/static/upload/20181010/upload_ce148f6263ae11cfcef1e69603d2f34f.png)
+![alt](https://github.com/samsonCao/react-iframe/blob/master/public/images/shouldUpdate.png)
 
 **getSnapshotBeforeUpdate**
 --------
@@ -168,7 +170,7 @@ getSnapshotBeforeUpdate(prevProps, prevState) {
     }
 ```
 
-![alt](http://192.168.1.150:8360/static/upload/20181010/upload_a8f1413aac37f6858c20ccbfc4f6c515.png)
+![getSnapshotBeforeUpdate](https://github.com/samsonCao/react-iframe/blob/master/public/images/beforeUpdate.png)
 
 
 **componentDidUpdate**
@@ -196,7 +198,7 @@ componentDidUpdate(prevProps, prevState, counter) {
     }
 ```
 
-![alt](http://192.168.1.150:8360/static/upload/20181010/upload_c934f323938a722c0f9201d9da00b5e2.png)
+![componentDidUpdate](https://github.com/samsonCao/react-iframe/blob/master/public/images/didUpdate.png)
 
 **componentWillUnmount**
 --------
