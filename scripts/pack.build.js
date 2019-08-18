@@ -11,7 +11,11 @@ const buildConfig = merge(baseConfig, {
     devtool: false,
     output: {
         path: path.join(__dirname, '../build'),
-        filename: '[name].[chunkhash:8].js'
+        filename: '[name].[chunkhash:8].js',
+        // 生成的chunk名称
+        chunkFileName: '[name].[chunkhash:8].js',
+        // publicPath
+        publicPath: '/'
     },
     /**
      * 这种方式配置下，就是配置你所引用你的库暴露出的全局变量。

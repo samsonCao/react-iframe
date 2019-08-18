@@ -17,7 +17,7 @@ const baseConfig = {
      * 程序的⼊⼝
      * https://webpack.js.org/configuration/entry-context/#entry
      **/
-    entry: path.join(__dirname, '../app/index.js'),
+    entry: ['@babel/polyfill', path.join(__dirname, '../app/index.js')],
 
     /**
      * 启动开发服务 执行 npm run dev, 输出如下:
