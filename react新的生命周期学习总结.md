@@ -39,10 +39,15 @@ React将组件看成是一个有生命的个体，因此为其赋予了生命周
 **constructor**
 --------
 1.constructor含参数props。 constructor是构造方法，也是ES6对类的默认方法。
+
 2.如果你用到了constructor就必须写super(),是用来初始化this的，可以绑定事件到this上。
-3.通过super继承Component组件的方法。如果你在constructor中要使用this.props,就必须给super加参4.数：super(props)；
-4.无论有没constructor，在render中this.props都是可以使用的，这是React自动附带的；
+
+3.通过super继承Component组件的方法。如果你在constructor中要使用this.props,就必须给super加参数：super(props)。
+
+4.无论有没constructor，在render中this.props都是可以使用的，这是React自动附带的。
+
 5.调用super(props)，用来将父组件传来的props绑定到这个类中，使用this.props将会得到。
+
 6.如果没用到constructor,是可以不写的；React会默认添加一个空的constructor。
 
 
@@ -76,7 +81,9 @@ static表示是静态的方法，此方法无法通过this访问组件实例 thi
 - 参数2是组件自身维护的状态数据
 
 比较nextProps和prevState,如果两个值不同，返回一个对象用来更新state；如果两个值相同，返回null,表示不需要更新state.
+
 返回对象时调用componentDidUpdate，可以执行对应的操作
+
 禁止在此处调用能执行方法体内含有this.setState的方法。如果nextProps.counter 下的属性是undefined 回有异常(组件无法渲染出数据),所以要先判断.
 
 ```javascript
@@ -231,8 +238,11 @@ componentDidUpdate(prevProps, prevState, counter) {
 
 **componentDidCatch**
 --------
-- 错误边界是React组件，可以在其子组件树中的任何位置捕获JavaScript错误，记录这些错误并显示回退UI，而不是崩溃的组件树。错误边界在渲染期间，生命周期方法以及整个树下的构造函数中捕获错误。
-     - 如果类组件定义了此生命周期方法，则它将成为错误边界。在它中调用setState()可以让你在下面的树中捕获未处理的JavaScript错误，并显示一个后备UI。只能使用错误边界从意外异常中恢复;不要试图将它们用于控制流程。详细错误边界只会捕获树中下面组件中的错误。错误边界本身不能解决错误。
+- 错误边界是React组件，可以在其子组件树中的任何位置捕获JavaScript错误，记录这些错误并显示回退UI，而不是崩溃的组件树。
+错误边界在渲染期间，生命周期方法以及整个树下的构造函数中捕获错误。
+     - 如果类组件定义了此生命周期方法，则它将成为错误边界。
+     在它中调用setState()可以让你在下面的树中捕获未处理的JavaScript错误，并显示一个后备UI。
+     只能使用错误边界从意外异常中恢复;不要试图将它们用于控制流程。详细错误边界只会捕获树中下面组件中的错误。错误边界本身不能解决错误。
 
 
 ```javascript
